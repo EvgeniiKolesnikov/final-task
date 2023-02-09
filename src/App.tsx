@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="final-task">
       <Routes>
         <Route path="/speedmatch" element={<SpeedMatch />} />
         {/* <Route path='/' element={<SpeedMatch/>}/> */}
