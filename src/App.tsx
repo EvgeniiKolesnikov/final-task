@@ -1,17 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import SpeedMatch from './Games/GameSpeedMatch/SpeedMatch';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import GameStats from './components/GameStats/GameStats';
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter basename="final-task">
+    <>
+      <nav className="nav">
+        <ul>
+          <li>
+            <NavLink to="/">home NavLink</NavLink>
+          </li>
+          <li>
+            <NavLink to="/s">SpeedMatch NavLink</NavLink>
+          </li>
+          <li>
+            <NavLink to="/#s">#SpeedMatch NavLink</NavLink>
+          </li>
+          <li>
+            <Link to="./Games/GameSpeedMatch/SpeedMatch.tsx">Link long</Link>
+          </li>
+          <li>
+            <Link to="/s">Link /s</Link>
+          </li>
+        </ul>
+      </nav>
+
       <Routes>
-        <Route path="/speedmatch" element={<SpeedMatch />} />
-        {/* <Route path='/' element={<SpeedMatch/>}/> */}
+        <Route path="/" element={<GameStats />} />
+        <Route path="/s" element={<SpeedMatch />} />
+        <Route path="/#s" element={<SpeedMatch />} />
       </Routes>
-    </BrowserRouter>
+      {/* <div>/final-task/s</div> */}
+      {/* <NavLink to={'./components/Card/Card.tsx'}>nav</NavLink> */}
+    </>
   );
 }
 
