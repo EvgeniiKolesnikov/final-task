@@ -12,30 +12,26 @@ function App() {
       <nav className="nav">
         <ul>
           <li>
-            <NavLink to="/">home NavLink</NavLink>
+            <NavLink to="/">NavLink - /</NavLink>
           </li>
           <li>
-            <NavLink to="/s">SpeedMatch NavLink</NavLink>
+            <NavLink to="/speedmatch">NavLink - /speedmatch</NavLink>
+          </li>
+
+          <li>
+            <Link to="/">Link - /</Link>
           </li>
           <li>
-            <NavLink to="/#s">#SpeedMatch NavLink</NavLink>
-          </li>
-          <li>
-            <Link to="./Games/GameSpeedMatch/SpeedMatch.tsx">Link long</Link>
-          </li>
-          <li>
-            <Link to="/s">Link /s</Link>
+            <Link to="/speedmatch">Link - /speedmatch</Link>
           </li>
         </ul>
       </nav>
 
       <Routes>
         <Route path="/" element={<GameStats />} />
-        <Route path="/s" element={<SpeedMatch />} />
-        <Route path="/#s" element={<SpeedMatch />} />
+        <Route path="/speedmatch" element={<SpeedMatch />} />
+        <Route path="/#speedmatch" element={<SpeedMatch />} />
       </Routes>
-      {/* <div>/final-task/s</div> */}
-      {/* <NavLink to={'./components/Card/Card.tsx'}>nav</NavLink> */}
     </>
   );
 }
