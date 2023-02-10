@@ -15,6 +15,9 @@ function App() {
             <NavLink to="/">NavLink - /</NavLink>
           </li>
           <li>
+            <NavLink to="/">NavLink - /</NavLink>
+          </li>
+          <li>
             <NavLink to="/speedmatch">NavLink - /speedmatch</NavLink>
           </li>
 
